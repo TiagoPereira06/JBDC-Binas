@@ -35,7 +35,7 @@ public abstract class ConnectionFactory {
 			url += "user=" + database.Username + ";password="
 					+ database.Password + ";";
 		}
-
+		System.out.println(url); //TODO - RESOLVER LIGAÇÃO
 		return url;
 	}
 

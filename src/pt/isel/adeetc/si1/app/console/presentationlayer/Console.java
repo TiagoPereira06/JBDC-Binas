@@ -36,14 +36,14 @@ public class Console {
 				
 				if(opcao >= menu.menuItems.size())
 				{
-					System.out.println("Unkown option - > " + opcao);
+					System.out.println("Unknown option - > " + opcao);
 					continue;
 				}
 			}
 			else 
 			{
 				String str = input.nextLine();
-				System.out.println("Unkown option - > " + str);
+				System.out.println("Unknown option - > " + str);
 				continue;
 			}
 			

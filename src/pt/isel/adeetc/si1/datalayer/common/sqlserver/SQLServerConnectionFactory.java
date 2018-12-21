@@ -21,12 +21,12 @@ public class SQLServerConnectionFactory extends ConnectionFactory {
 	public Connection getConnection() throws ClassNotFoundException, SQLException {
 		/* Private methods */
 
-		Connection conn = null;
+		Connection conn;
 
 		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
 		// get a connection to DB
-		conn = (Connection) DriverManager.getConnection(GetConnectionString());
+		conn = DriverManager.getConnection(GetConnectionString());
 		conn.setAutoCommit(false);
 		
 		return conn;

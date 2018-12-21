@@ -60,9 +60,10 @@ public class Actions {
 	/*Option 2*/
 	public void ListStudents(Scanner input, Console console) throws ServiceException
 	{
-		System.out.println("\nListing the Students.");
+		System.out.println("\nListing the Students. Bora lá"); //TODO
 		
 		List<Student> curses = studentService.GetStudents(); //TODO
+
 		Iterator<Student> it = curses.iterator(); //TODO
 
 

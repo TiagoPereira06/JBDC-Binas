@@ -17,7 +17,8 @@ public class StudentDAO extends BaseDAO implements IStudentDAO {
 		Connection conn = null;
 
 		try {
-			String statementQuery = "select BIAluno, NomeAluno, MoradaAluno, DataNascimento, NIFAluno from Aluno";
+			//String statementQuery = "select BIAluno, NomeAluno, MoradaAluno, DataNascimento, NIFAluno from Aluno";
+			String statementQuery = "select Email, Nome, NIF from Pessoa";
 			Student item;
 			ArrayList<Student> container = new ArrayList<Student>();
 
@@ -28,11 +29,12 @@ public class StudentDAO extends BaseDAO implements IStudentDAO {
 
 			while (rs.next()) {
 				item = new Student();
-				item.BI = rs.getInt(1);
+				//item.BI = rs.getInt(1);
+				item.Email = rs.getString(1);
 				item.Name = rs.getString(2);
-				item.Address = rs.getString(3);
-				item.BirthDate = rs.getDate(4);
-				item.NIF = rs.getInt(5);
+				//item.Address = rs.getString(3);
+				//item.BirthDate = rs.getDate(4);
+				item.NIF = rs.getInt(3);
 				container.add(item);
 			}
 
@@ -44,7 +46,5 @@ public class StudentDAO extends BaseDAO implements IStudentDAO {
 		} finally {
 			closeConnection(conn);
 		}
-
 	}
-
 }

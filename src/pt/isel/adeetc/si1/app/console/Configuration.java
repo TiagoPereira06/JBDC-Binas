@@ -55,7 +55,7 @@ public class Configuration {
 				BaseDAO.setConnectionFactory(SQLServerConnectionFactory
 						.getInstance());
 			} 
-			/* TODO: Support oracle and MySQL */
+
 		}
 
 		public String Server;

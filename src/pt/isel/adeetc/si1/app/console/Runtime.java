@@ -11,7 +11,7 @@ public class Runtime {
 		if(!Configuration.getInstance().ConfigurationLoadSucess)
 		{
 			System.out.println("Unable to load configuration.");
-			System.out.println("Unable to proceed!. Pleaase check the following error:");
+			System.out.println("Unable to proceed! Please check the following error:");
 			System.out.println(Configuration.getInstance().ConfigurationLoadDescription);
 			return;
 		} 
@@ -19,7 +19,7 @@ public class Runtime {
 		try {
 			(new Console()).run();
 		} catch (Exception e) {
-			System.out.println("Sorry something silly happend!!!");
+			System.out.println("Sorry something silly happened!!!");
 			System.out.println("Cause: " + e.getMessage());
 			System.out.println("Program aborted.");
 			e.printStackTrace();
