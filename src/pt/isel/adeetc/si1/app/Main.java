@@ -1,4 +1,8 @@
-package pt.isel.adeetc.si1;
+package pt.isel.adeetc.si1.app;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Main {
 
@@ -8,6 +12,11 @@ public class Main {
 
         loadDriver();
 
+        try( Connection con = getConnection()){
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         /*
         ...
         ...
@@ -23,16 +32,15 @@ public class Main {
 
 
 
-    public static void loadDriver() throws ClassNotFoundException {
+    private static void loadDriver() throws ClassNotFoundException {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
     }
 
-    /*
     public static Connection getConnection() throws SQLException {
         Connection con = DriverManager.getConnection(connectionURL, "sa1","sa1");
         con.setAutoCommit(false);
         return con;
     }
-    */
+
 
 }
