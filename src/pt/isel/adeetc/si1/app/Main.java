@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Main {
 
-    static private final String connectionURL = "jdbc:sqlserver://localhost;databaseName=si1;"; //TODO: ALTERAR
+    static private final String connectionURL = "jdbc:sqlserver://localhost;databaseName=Binas;"; //TODO: ALTERAR
 
     public static void main(String[] args) throws ClassNotFoundException {
 

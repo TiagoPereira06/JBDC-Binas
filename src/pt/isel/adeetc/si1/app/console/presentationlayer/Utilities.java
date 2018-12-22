@@ -88,15 +88,15 @@ public class Utilities {
 	public static void PrintTableHeaderForStudents()
 	{
 		//System.out.printf("%-5s%-15s%-20s%-15s%-15s\n","BI", "Name", "Address", "BirthDate", "NIF");
-		System.out.printf("%-15s%-15s%-15s\n","Email", "Name", "NIF");
+		System.out.printf("%-40s%-20s%-15s\n","Email", "Name", "NIF");
 		System.out.println("******************************************************************");
 	}
 	
 	public static void PrintStudent(Student student)
 	{
-		String name = student.Name.length()>15?student.Name.substring(0, 14):student.Name;
+		//String name = student.Name.length()>15?student.Name.substring(0, 14):student.Name;
 		//String address = student.Address.length()>20?student.Address.substring(0, 19):student.Address;
 		//System.out.printf("%-5d%-15s%-20s%-15s%-15d\n",student.BI, name, address, student.BirthDate.toString(), student.NIF );
-		System.out.printf("%-15s%-15s%-15d\n",student.Email, name, student.NIF );
+		System.out.printf("%-40s%-20s%-15d\n",student.Email, student.Name, student.NIF);
 	}
 }
