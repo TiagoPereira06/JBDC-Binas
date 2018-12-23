@@ -11,11 +11,11 @@ import pt.isel.adeetc.si1.model.Viagem;
 
 public interface IBusiness extends IService {
 
-    List<Pessoa> GetPessoas() throws ServiceException;
+    List<Pessoa> getPessoas() throws ServiceException;
 
     List<Funcionário> getFuncs() throws ServiceException;
 
-    List<Passe_Utilizador> GetPasses() throws ServiceException;
+    List<Passe_Utilizador> getPasses() throws ServiceException;
 
     List<Viagem> getViagsUtil(String email, Timestamp dt_init, Timestamp dt_fim) throws ServiceException;
 

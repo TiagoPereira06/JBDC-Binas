@@ -57,14 +57,14 @@ public class Actions {
     }
 
     /*Option 2*/
-    public void AddUtilizador(Scanner input, Console console) throws ServiceException, ParseException {
+    public void insertUtilizador(Scanner input, Console console) throws ServiceException, ParseException {
         String email = null;
         int id, saldo;
         String ref, data_registo, data_aquisi;
         Date dt_reg, dt_aqui;
 
         if (Utilities.YesOrNoQuestion(input, "\nPretende inserir uma nova Pessoa no sistema?"))
-            email = AddPessoa(input, console);
+            email = insertPessoa(input, console);
 
         System.out.println("\n Inserir um novo Utilizador");
         System.out.println("Insira os seguintes valores:");
@@ -89,7 +89,7 @@ public class Actions {
     }
 
 
-    private String AddPessoa(Scanner input, Console console) throws ServiceException {
+    private String insertPessoa(Scanner input, Console console) throws ServiceException {
         System.out.println("\nCriação de uma nova Pessoa!");
         System.out.println("Insira os seguintes valores:");
 
@@ -102,8 +102,6 @@ public class Actions {
 
         return business.insertPessoa(email, nome, nif); //retorna o Email da Pessoa criada
     }
-    // Insert more action menu items.
-    // The methods must have the following signature "public void [METHODNAME](Scanner input) throws BusinessException"
 
     /*Option 3*/
     public void deleteFunc(Scanner input, Console console) throws ServiceException {

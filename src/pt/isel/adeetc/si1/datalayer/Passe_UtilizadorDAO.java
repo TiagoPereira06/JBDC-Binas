@@ -33,7 +33,8 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
                 item.setDt_aqui(rs.getDate(6));
                 container.add(item);
             }
-
+            stmt.close();
+            rs.close();
             return container;
         } catch (Exception exception) {
             throw new DatabaseException(

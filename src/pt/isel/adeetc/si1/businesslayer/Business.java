@@ -66,7 +66,7 @@ public class Business implements IBusiness {
     }
 
     @Override
-    public List<Pessoa> GetPessoas() throws ServiceException {
+    public List<Pessoa> getPessoas() throws ServiceException {
         try {
             return pessoaDAO.getPessoas();
         } catch (DatabaseException exception) {
@@ -84,7 +84,7 @@ public class Business implements IBusiness {
     }
 
     @Override
-    public List<Passe_Utilizador> GetPasses() throws ServiceException {
+    public List<Passe_Utilizador> getPasses() throws ServiceException {
         try {
             return passe_uDAO.getUtilizadores();
         } catch (DatabaseException exception) {
