@@ -29,9 +29,10 @@ public class Menu {
 		menuItems.add(new MenuItem("Quit", Actions.class.getDeclaredMethod("Quit", params)));
 		menuItems.add(new MenuItem("About", Actions.class.getDeclaredMethod("About", params)));
 		menuItems.add(new MenuItem("Adicionar um novo Utilizador",  Actions.class.getDeclaredMethod("AddUtilizador", params)));
-		menuItems.add(new MenuItem("Listar Utilizadores",  Actions.class.getDeclaredMethod("ListarUtilizadores", params)));
-		menuItems.add(new MenuItem("Eliminar Utilizador",  Actions.class.getDeclaredMethod("deleteUtilizador", params)));
-		menuItems.add(new MenuItem("Listar Pessoas",  Actions.class.getDeclaredMethod("ListarPessoas", params)));
+		//menuItems.add(new MenuItem("Listar Utilizadores",  Actions.class.getDeclaredMethod("ListarUtilizadores", params)));
+		//menuItems.add(new MenuItem("Eliminar Utilizador",  Actions.class.getDeclaredMethod("deleteUtilizador", params)));
+		//menuItems.add(new MenuItem("Listar Pessoas",  Actions.class.getDeclaredMethod("ListarPessoas", params)));
+		menuItems.add(new MenuItem("Eliminar Funcionário",  Actions.class.getDeclaredMethod("deleteFunc", params)));
 
 		//TODO
 		// Insert more menu items to the menu. They must be implemented at CustomActions.java

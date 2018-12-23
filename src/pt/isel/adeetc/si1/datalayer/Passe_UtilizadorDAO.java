@@ -13,7 +13,6 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
     @Override
     public List<Passe_Utilizador> getUtilizadores() throws DatabaseException {
         Connection conn = null;
-
         try {
             String statementQuery = "select ID, Email, Data_Registo, Referência, Saldo, Data_Aquisição from Passe_Utilizador";
             Passe_Utilizador item;
@@ -61,6 +60,7 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
             preparedStat.executeUpdate();
             conn.commit();
             preparedStat.close();
+            System.out.println("Utilizador inserido com sucesso!");
         } catch (Exception exception) {
             throw new DatabaseException(
                     "Unable to insert Utilizador. \nCause: "
@@ -83,6 +83,8 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
             stmt.setInt(1, id);
             stmt.executeUpdate();
             conn.commit();
+            stmt.close();
+            System.out.println("Utilizador removido com sucesso!");
         } catch (Exception e) {
             throw new DatabaseException(
                     "Unable to delete Utilizador. \nCause: "

@@ -11,6 +11,7 @@ import pt.isel.adeetc.si1.app.console.Configuration;
 import pt.isel.adeetc.si1.businesslayer.IBusiness;
 import pt.isel.adeetc.si1.businesslayer.ServiceException;
 import pt.isel.adeetc.si1.businesslayer.Business;
+import pt.isel.adeetc.si1.model.Funcionário;
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
 
@@ -74,7 +75,7 @@ public class Actions {
 		Date dt_reg, dt_aqui;
 
 		id = Utilities.GetInt(input, "ID_Passe?", "Insira um ID válido!");
-		if (email == null) Utilities.GetString(input, "Email?");
+		if (email == null) email = Utilities.GetString(input, "Email?");
 		data_registo = Utilities.GetString(input, "Data Registo(yyyyMMdd)");
 		ref = Utilities.GetString(input, "Referência");
 		saldo = Utilities.GetInt(input, "Saldo","Insira valores inteiros!");
@@ -148,10 +149,25 @@ public class Actions {
 	// The methods must have the following signature "public void [METHODNAME](Scanner input) throws BusinessException"
 
 	/*Option 3*/
-	public void OptionNumber3(Scanner input, Console console) throws ServiceException
-	{
-		System.out.println();
-		System.out.println("Not yet implemented!!!");
-		System.out.println();
+	public void deleteFunc(Scanner input, Console console) throws ServiceException {
+		List<Funcionário> curses = business.GetFuncs();
+		Iterator<Funcionário> it;
+		boolean delete;
+			do{
+				System.out.println("\nIndique o Número do Funcionário a eliminar!");
+				it = curses.iterator();
+				if (!it.hasNext()) {
+					System.out.println("Sem Funcionários!");
+					return;
+				} else {
+					Utilities.PrintTableHeaderForFuncs();
+					while (it.hasNext()) {
+						Utilities.PrintFuncs(it.next());
+					}
+				}
+				delete = business.deleteFunc(Utilities.GetInt(input,"\nNum?","Insira valores inteiros!"));;
+			}
+			while (!delete);
+			System.out.println("Funcionário removido!");
 	}
 }

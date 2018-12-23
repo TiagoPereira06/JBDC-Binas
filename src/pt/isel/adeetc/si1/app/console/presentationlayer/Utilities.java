@@ -2,6 +2,7 @@ package pt.isel.adeetc.si1.app.console.presentationlayer;
 
 import java.util.Scanner;
 
+import pt.isel.adeetc.si1.model.Funcionário;
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
 import pt.isel.adeetc.si1.model.Student;
@@ -103,11 +104,20 @@ public class Utilities {
 	}
 
     public static void PrintTableHeaderForPasses() {
-		System.out.printf("%-5s%-30s%-20s%-10s%-8s%-20s\n","ID", "Email", "Data_Registo", "Referência","Saldo", "Data_Aquisição");
-		System.out.println("**********************************************************************************");
+		System.out.printf("%-5s%-30s%-20s%-15s%-8s%-20s\n","ID", "Email", "Data_Registo", "Referência","Saldo", "Data_Aquisição");
+		System.out.println("**************************************************************************************************");
     }
 
 	public static void PrintPasses(Passe_Utilizador passe) {
-		System.out.printf("%-5d%-30s%-20s%-10s%-8d%-20s\n",passe.getId(),passe.getEmail(),passe.getDt_reg(),passe.getRef(),passe.getSaldo(),passe.getDt_aqui());
+		System.out.printf("%-5d%-30s%-20s%-15s%-8d%-20s\n",passe.getId(),passe.getEmail(),passe.getDt_reg(),passe.getRef(),passe.getSaldo(),passe.getDt_aqui());
+	}
+
+	public static void PrintTableHeaderForFuncs() {
+		System.out.printf("%-5s%-30s\n", "Num", "Email");
+		System.out.println("**************************************************************************************************");
+	}
+
+	public static void PrintFuncs(Funcionário func) {
+		System.out.printf("%-5d%-30s\n",func.getNum(),func.getEmail());
 	}
 }

@@ -3,11 +3,9 @@ package pt.isel.adeetc.si1.businesslayer;
 import java.sql.Date;
 import java.util.List;
 
-import pt.isel.adeetc.si1.datalayer.IPasse_UtilizadorDAO;
-import pt.isel.adeetc.si1.datalayer.IPessoaDAO;
-import pt.isel.adeetc.si1.datalayer.Passe_UtilizadorDAO;
-import pt.isel.adeetc.si1.datalayer.PessoaDAO;
+import pt.isel.adeetc.si1.datalayer.*;
 import pt.isel.adeetc.si1.datalayer.common.DatabaseException;
+import pt.isel.adeetc.si1.model.Funcionário;
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
 
@@ -21,6 +19,7 @@ public class Business implements IBusiness {
 
 	private IPessoaDAO pessoaDAO;
 	private IPasse_UtilizadorDAO passe_uDAO;
+	private IFuncDAO func_DAO;
 	
 	
 	public IPessoaDAO getPessoaDAO() {
@@ -39,12 +38,16 @@ public class Business implements IBusiness {
 		this.pessoaDAO = pessoaDAO;
 	}
 
+	public IFuncDAO getFunc_DAO() {	return func_DAO;}
+
+	public void setFunc_DAO(IFuncDAO func_DAO) {this.func_DAO = func_DAO;}
+
 	public Business()
 	{
 		/* Creates a new DAO but allows for future refactoring to support Dependency Injection */
 		pessoaDAO = new PessoaDAO();
 		passe_uDAO = new Passe_UtilizadorDAO();
-
+		func_DAO = new FuncDAO();
 	}
 	
 	@Override
@@ -54,6 +57,18 @@ public class Business implements IBusiness {
 			return pessoaDAO.getPessoas();
 		} 
 		catch (DatabaseException exception) 
+		{
+			throw new ServiceException(exception.getMessage(), exception);
+		}
+	}
+
+	@Override
+	public List<Funcionário> GetFuncs() throws ServiceException {
+		try
+		{
+			return func_DAO.getFuncs();
+		}
+		catch (DatabaseException exception)
 		{
 			throw new ServiceException(exception.getMessage(), exception);
 		}
@@ -84,6 +99,18 @@ public class Business implements IBusiness {
 	}
 
 	@Override
+	public String insertPessoa(String email, String nome, int nif) throws ServiceException {
+		try
+		{
+			return pessoaDAO.insertPessoa(email,nome,nif);
+		}
+		catch (DatabaseException exception)
+		{
+			throw new ServiceException(exception.getMessage(), exception);
+		}
+	}
+
+	@Override
 	public void deleteUtilizador(int id) throws ServiceException {
 		try
 		{
@@ -95,15 +122,17 @@ public class Business implements IBusiness {
 		}
 	}
 
+
 	@Override
-	public String insertPessoa(String email, String nome, int nif) throws ServiceException {
+	public boolean deleteFunc(int num) throws ServiceException {
 		try
 		{
-			return pessoaDAO.insertPessoa(email,nome,nif);
+			return func_DAO.deleteFunc(num);
 		}
 		catch (DatabaseException exception)
 		{
 			throw new ServiceException(exception.getMessage(), exception);
 		}
 	}
+
 }

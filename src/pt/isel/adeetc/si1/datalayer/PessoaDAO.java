@@ -34,7 +34,8 @@ public class PessoaDAO extends BaseDAO implements IPessoaDAO {
 				item.setNif(rs.getInt(3));
 				container.add(item);
 			}
-
+			stmt.close();
+			rs.close();
 			return container;
 		} catch (Exception exception) {
 			throw new DatabaseException(
@@ -58,6 +59,7 @@ public class PessoaDAO extends BaseDAO implements IPessoaDAO {
 			preparedStat.executeUpdate();
 			conn.commit();
 			preparedStat.close();
+			System.out.println("Pessoa inserida com sucesso!");
 		} catch (Exception exception) {
 			throw new DatabaseException(
 					"Unable to insert Pessoa. \nCause: "

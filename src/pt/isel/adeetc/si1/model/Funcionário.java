@@ -5,11 +5,6 @@ public class Funcionário {
     private int num;
     private String email;
 
-    public Funcionário(int num, String email){
-        setEmail(email);
-        setNum(num);
-    }
-
     public int getNum() {
         return num;
     }
