@@ -4,7 +4,7 @@ public class Clássica {
 
     private int id;
 
-    public Clássica(int id){
+    public Clássica(int id) {
         setId(id);
     }
 

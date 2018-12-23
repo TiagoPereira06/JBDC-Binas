@@ -4,7 +4,7 @@ public class Doca_Bicicleta {
 
     private int idBic, idEst, numDoca;
 
-    public Doca_Bicicleta(int idBic, int idEst, int numDoca){
+    public Doca_Bicicleta(int idBic, int idEst, int numDoca) {
         setIdBic(idBic);
         setIdEst(idEst);
         setNumDoca(numDoca);

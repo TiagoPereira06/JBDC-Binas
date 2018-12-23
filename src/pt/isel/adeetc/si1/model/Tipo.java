@@ -5,7 +5,7 @@ public class Tipo {
     private String ref;
     private int numDias, preço;
 
-    public Tipo(String ref, int num_dias, int preço){
+    public Tipo(String ref, int num_dias, int preço) {
         setRef(ref);
         setNumDias(num_dias);
         setPreço(preço);

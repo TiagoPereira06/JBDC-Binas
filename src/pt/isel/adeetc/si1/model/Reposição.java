@@ -7,7 +7,7 @@ public class Reposição {
     private Date dt_ped, dt_rep;
     private int numRep, numFunc;
 
-    public Reposição(Date dtPed, int num, int numFunc, Date dtRep){
+    public Reposição(Date dtPed, int num, int numFunc, Date dtRep) {
         setDt_ped(dtPed);
         setNumRep(num);
         setNumFunc(numFunc);

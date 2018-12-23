@@ -45,9 +45,10 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
     }
 
     @Override
-    public void insertUtilizador(int id, String email, Date dt_reg, String ref, int saldo, Date dt_aqui) throws DatabaseException {
+    public boolean insertUtilizador(int id, String email, Date dt_reg, String ref, int saldo, Date dt_aqui) throws DatabaseException {
         String comandoSQL = "INSERT INTO Passe_Utilizador VALUES (?, ?, ?, ?, ?, ?)";
         Connection conn = null;
+        int count;
         try {
             conn = getConnectionFactory().getConnection();
             PreparedStatement preparedStat = conn.prepareStatement(comandoSQL);
@@ -57,10 +58,9 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
             preparedStat.setString(4, ref);
             preparedStat.setInt(5, saldo);
             preparedStat.setDate(6, dt_aqui);
-            preparedStat.executeUpdate();
+            count = preparedStat.executeUpdate();
             conn.commit();
             preparedStat.close();
-            System.out.println("Utilizador inserido com sucesso!");
         } catch (Exception exception) {
             throw new DatabaseException(
                     "Unable to insert Utilizador. \nCause: "
@@ -68,8 +68,7 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
         } finally {
             closeConnection(conn);
         }
-
-
+        return count > 0;
     }
 
     @Override
@@ -93,4 +92,4 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
         }
     }
 
-    }
+}

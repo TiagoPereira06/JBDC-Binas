@@ -7,7 +7,7 @@ public class Carregamento {
     private int idPasse, valor;
     private Date dt_carr;
 
-    public Carregamento(int id_Passe, Date dt_carr, int valor){
+    public Carregamento(int id_Passe, Date dt_carr, int valor) {
         setIdPasse(id_Passe);
         setDt_carr(dt_carr);
         setValor(valor);

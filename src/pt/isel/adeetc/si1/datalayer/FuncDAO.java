@@ -57,7 +57,7 @@ public class FuncDAO extends BaseDAO implements IFuncDAO {
             stmt.close();
         } catch (Exception e) {
             throw new DatabaseException(
-                    "Unable to delete Utilizador. \nCause: "
+                    "Unable to delete Funcionário. \nCause: "
                             + e.getMessage(), e);
         } finally {
             closeConnection(conn);

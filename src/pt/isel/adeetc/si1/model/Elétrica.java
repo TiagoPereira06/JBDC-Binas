@@ -5,7 +5,7 @@ public class Elétrica {
     private int id;
     private float auto;
 
-    public Elétrica(int id, float autonomia){
+    public Elétrica(int id, float autonomia) {
         setId(id);
         setAuto(autonomia);
     }

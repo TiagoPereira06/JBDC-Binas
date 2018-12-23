@@ -4,7 +4,7 @@ public class SistemaMudanças {
 
     private int design;
 
-    public SistemaMudanças(int design){
+    public SistemaMudanças(int design) {
         setDesign(design);
     }
 

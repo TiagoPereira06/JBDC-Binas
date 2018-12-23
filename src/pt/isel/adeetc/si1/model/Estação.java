@@ -5,7 +5,7 @@ public class Estação {
     private int id;
     private String Loc;
 
-    public Estação(int id, String localização){
+    public Estação(int id, String localização) {
         setId(id);
         setLoc(localização);
     }

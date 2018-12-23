@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface IPasse_UtilizadorDAO {
     List<Passe_Utilizador> getUtilizadores() throws DatabaseException;
-    void insertUtilizador(int id, String email, Date dt_reg, String ref, int saldo, Date dt_aqui) throws DatabaseException;
+
+    boolean insertUtilizador(int id, String email, Date dt_reg, String ref, int saldo, Date dt_aqui) throws DatabaseException;
+
     void deleteUtilizador(int id) throws DatabaseException;
 }

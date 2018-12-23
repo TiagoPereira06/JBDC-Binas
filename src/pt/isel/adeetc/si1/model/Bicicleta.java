@@ -5,7 +5,7 @@ public class Bicicleta {
     private int id, peso, valorV, design;
     private float raio;
 
-    public Bicicleta(int id, int peso, float raioRodas, int valorViagem, int design){
+    public Bicicleta(int id, int peso, float raioRodas, int valorViagem, int design) {
         setId(id);
         setPeso(peso);
         setRaio(raioRodas);

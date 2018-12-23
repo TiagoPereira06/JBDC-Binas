@@ -5,7 +5,7 @@ public class Doca {
     private int idEst, num;
     private String estado;
 
-    public Doca(int idEstação, int numDoca, String estado){
+    public Doca(int idEstação, int numDoca, String estado) {
         setIdEst(idEstação);
         setNum(numDoca);
         setEstado(estado);

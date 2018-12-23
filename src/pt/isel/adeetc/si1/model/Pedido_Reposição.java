@@ -7,7 +7,7 @@ public class Pedido_Reposição {
     private Date dt_ped, dt_rep;
     private int idEst;
 
-    public Pedido_Reposição(Date dataPed, int idEst, Date dataRep){
+    public Pedido_Reposição(Date dataPed, int idEst, Date dataRep) {
         setDt_ped(dataPed);
         setIdEst(idEst);
         setDt_rep(dataRep);

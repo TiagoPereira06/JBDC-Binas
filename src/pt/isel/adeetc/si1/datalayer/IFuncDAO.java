@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface IFuncDAO {
     List<Funcionário> getFuncs() throws DatabaseException;
+
     boolean deleteFunc(int num) throws DatabaseException;
 }
