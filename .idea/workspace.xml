@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815bf041-ccd6-49d0-ae44-4cbdf768ba00" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPasse_UtilizadorDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/Passe_UtilizadorDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Utilities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IStudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPessoaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/StudentDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Passe_Utilizador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Passe_Utilizador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/Business.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IStudentService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java">
+      <file leaf-file-name="IBusiness.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IBusiness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+            <state relative-caret-position="272">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,35 +43,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Business.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/Business.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="643">
+              <caret line="57" column="38" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Utilities.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Utilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StudentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="116" column="34" lean-forward="true" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+            <state relative-caret-position="391">
+              <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,8 +70,8 @@
       <file leaf-file-name="IPessoaDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPessoaDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="153">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -97,23 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PessoaDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java">
+      <file leaf-file-name="Actions.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IPasse_UtilizadorDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPasse_UtilizadorDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+            <state relative-caret-position="354">
+              <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,8 +94,8 @@
       <file leaf-file-name="Menu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="32" column="117" selection-start-line="32" selection-start-column="117" selection-end-line="32" selection-end-column="117" />
+            <state relative-caret-position="320">
+              <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -136,12 +106,33 @@
       <file leaf-file-name="Passe_UtilizadorDAO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/Passe_UtilizadorDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="77" column="71" lean-forward="true" selection-start-line="77" selection-start-column="71" selection-end-line="77" selection-end-column="71" />
+            <state relative-caret-position="1054">
+              <caret line="62" column="33" lean-forward="true" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#875#893#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PessoaDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/ServiceException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -191,19 +182,20 @@
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Pessoa.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/StudentDAO.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IStudentDAO.java" />
-        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPessoaDAO.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IUtilizador_PasseDAO.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/PessoaService.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IPessoaService.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Passe_Utilizador.java" />
-        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java" />
-        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Utilities.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPasse_UtilizadorDAO.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/Passe_UtilizadorDAO.java" />
+        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java" />
+        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPessoaDAO.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Menu.java" />
-        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java" />
+        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java" />
         <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java" />
+        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IBusiness.java" />
+        <option value="$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java" />
       </list>
     </option>
   </component>
@@ -277,13 +269,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="si1" type="462c0819:PsiDirectoryNode" />
               <item name="datalayer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="JBDC-Binas" type="b2602c69:ProjectViewProjectNode" />
-              <item name="JBDC-Binas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="si1" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -458,7 +443,21 @@
       <option name="project" value="LOCAL" />
       <updated>1545439044431</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Modelo de Dados&#10;Interfaces + Classes">
+      <created>1545565151863</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1545565151863</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modelo de Dados&#10;Interfaces + Classes">
+      <created>1545567153941</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1545567153941</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView">
@@ -483,12 +482,12 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50075644" side_tool="true" weight="0.32838285" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32838285" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.2359736" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49848714" weight="0.679868" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.35313532" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49848714" weight="0.85643566" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3283082" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32673267" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -511,7 +510,8 @@
     <MESSAGE value="Teste de novo Modelo de Dados" />
     <MESSAGE value="Teste de novo Modelo de Dados&#10;-&gt; Insere 2 na linha de comandos" />
     <MESSAGE value="Modelo de Dados&#10;-Já é possível estabelecer ligação à base de dados.&#10;Siga!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modelo de Dados&#10;-Já é possível estabelecer ligação à base de dados.&#10;Siga!" />
+    <MESSAGE value="Modelo de Dados&#10;Interfaces + Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelo de Dados&#10;Interfaces + Classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -523,17 +523,10 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="14" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Reposição.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Bicicleta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -794,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/ServiceException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/model/Passe_Utilizador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -840,22 +826,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPessoaDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPasse_UtilizadorDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="166">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPessoaDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="35" selection-start-line="40" selection-start-column="35" selection-end-line="40" selection-end-column="35" />
+        <state relative-caret-position="153">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.1/lib/src.zip!/java.base/java/lang/Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="2433" selection-start-line="2433" selection-end-line="2433" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/ServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/PessoaDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/Passe_UtilizadorDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="33" lean-forward="true" selection-start-line="62" selection-start-column="33" selection-end-line="62" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#875#893#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -870,41 +891,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/IPasse_UtilizadorDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/datalayer/Passe_UtilizadorDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="77" column="71" lean-forward="true" selection-start-line="77" selection-start-column="71" selection-end-line="77" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#875#893#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/StudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="65" column="39" selection-start-line="65" selection-start-column="39" selection-end-line="65" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
+        <state relative-caret-position="272">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -913,8 +903,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="32" column="117" selection-start-line="32" selection-start-column="117" selection-end-line="32" selection-end-column="117" />
+        <state relative-caret-position="320">
+          <caret line="33" column="87" selection-start-line="33" selection-start-column="87" selection-end-line="33" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/Business.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="643">
+          <caret line="57" column="38" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -923,18 +933,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/app/console/presentationlayer/Actions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="116" column="34" lean-forward="true" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pt/isel/adeetc/si1/businesslayer/IStudentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="354">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

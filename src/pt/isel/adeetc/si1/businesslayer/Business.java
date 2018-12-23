@@ -17,7 +17,7 @@ import pt.isel.adeetc.si1.model.Pessoa;
 //import TrabalhoSI1.MySQLDataAccessLayer.Database;
         
 
-public class StudentService implements IStudentService {
+public class Business implements IBusiness {
 
 	private IPessoaDAO pessoaDAO;
 	private IPasse_UtilizadorDAO passe_uDAO;
@@ -39,7 +39,7 @@ public class StudentService implements IStudentService {
 		this.pessoaDAO = pessoaDAO;
 	}
 
-	public StudentService()
+	public Business()
 	{
 		/* Creates a new DAO but allows for future refactoring to support Dependency Injection */
 		pessoaDAO = new PessoaDAO();

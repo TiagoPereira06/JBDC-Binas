@@ -5,9 +5,8 @@ import java.util.List;
 
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
-import pt.isel.adeetc.si1.model.Student;
 
-public interface IStudentService extends IService {
+public interface IBusiness extends IService {
 
 	List<Pessoa> GetPessoas() throws ServiceException;
 	List<Passe_Utilizador> GetPasses() throws ServiceException;

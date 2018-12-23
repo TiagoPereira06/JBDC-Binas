@@ -8,30 +8,30 @@ import java.util.List;
 import java.util.Scanner;
 
 import pt.isel.adeetc.si1.app.console.Configuration;
-import pt.isel.adeetc.si1.businesslayer.IStudentService;
+import pt.isel.adeetc.si1.businesslayer.IBusiness;
 import pt.isel.adeetc.si1.businesslayer.ServiceException;
-import pt.isel.adeetc.si1.businesslayer.StudentService;
+import pt.isel.adeetc.si1.businesslayer.Business;
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
 
 
 public class Actions {
 	
-	private IStudentService studentService;
+	private IBusiness business;
 	
 	
-	public IStudentService getStudentService() {
-		return studentService;
+	public IBusiness getBusiness() {
+		return business;
 	}
 
-	public void setStudentService(IStudentService studentService) {
-		this.studentService = studentService;
+	public void setBusiness(IBusiness business) {
+		this.business = business;
 	}
 
 	public Actions()
 	{
-		/* Creates a new StudentService but allows for future refactoring to support Dependency Injection */
-		studentService = new StudentService();
+		/* Creates a new Business but allows for future refactoring to support Dependency Injection */
+		business = new Business();
 	}
 	
 	/*Menu actions menu methods*/
@@ -77,7 +77,7 @@ public class Actions {
 		if (email == null) Utilities.GetString(input, "Email?");
 		data_registo = Utilities.GetString(input, "Data Registo(yyyyMMdd)");
 		ref = Utilities.GetString(input, "Referência");
-		saldo = Utilities.GetInt(input, "Saldo","Insira valores válidos!");
+		saldo = Utilities.GetInt(input, "Saldo","Insira valores inteiros!");
 		data_aquisi = Utilities.GetString(input, "Data Aquisição(yyyyMMdd)");
 
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
@@ -87,7 +87,7 @@ public class Actions {
 		parsed = format.parse(data_aquisi);
 		dt_aqui = new Date(parsed.getTime());
 
-		studentService.insertUtilizador(id,email,dt_reg,ref,saldo,dt_aqui);
+		business.insertUtilizador(id,email,dt_reg,ref,saldo,dt_aqui);
 		System.out.println("");
 	}
 
@@ -101,15 +101,15 @@ public class Actions {
 
 		email = Utilities.GetString(input,"Email?");
 		nome = Utilities.GetString(input, "Nome?");
-		nif = Utilities.GetInt(input, "NIF?", "Insira valores válidos!");
+		nif = Utilities.GetInt(input, "NIF?", "Insira valores inteiros!");
 
-		return studentService.insertPessoa(email, nome, nif); //retorna o Email da Pessoa criada
+		return business.insertPessoa(email, nome, nif); //retorna o Email da Pessoa criada
 	}
 
 	public void ListarUtilizadores(Scanner input, Console console) throws ServiceException {
 
 		System.out.println("\nListar Utilizadores!");
-		List<Passe_Utilizador> curses = studentService.GetPasses();
+		List<Passe_Utilizador> curses = business.GetPasses();
 		Iterator<Passe_Utilizador> it = curses.iterator();
 
 		if (!it.hasNext()) {
@@ -124,14 +124,13 @@ public class Actions {
 
 	public void deleteUtilizador(Scanner input, Console console) throws ServiceException{
 		System.out.println("\nIndique o ID do Utilizador a eliminar!");
-		int id = Utilities.GetInt(input,"ID?","Insira valores válidos!");
-		studentService.deleteUtilizador(id);
+		business.deleteUtilizador(Utilities.GetInt(input,"ID?","Insira valores válidos!"));
 	}
 
 	public void ListarPessoas(Scanner input, Console console) throws ServiceException {
 
 		System.out.println("\nListar Pessoas!");
-		List<Pessoa> curses = studentService.GetPessoas();
+		List<Pessoa> curses = business.GetPessoas();
 		Iterator<Pessoa> it = curses.iterator();
 
 		if (!it.hasNext()) {
