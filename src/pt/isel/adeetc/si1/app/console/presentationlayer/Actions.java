@@ -1,6 +1,7 @@
 package pt.isel.adeetc.si1.app.console.presentationlayer;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Iterator;
@@ -14,6 +15,7 @@ import pt.isel.adeetc.si1.businesslayer.Business;
 import pt.isel.adeetc.si1.model.Funcionário;
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
+import pt.isel.adeetc.si1.model.Viagem;
 
 
 public class Actions {
@@ -64,7 +66,7 @@ public class Actions {
 	public void AddUtilizador(Scanner input, Console console) throws ServiceException, ParseException {
 		String email = null;
 
-		if (!Utilities.YesOrNoQuestion(input, "\nA Pessoa já está no sistema?"))
+		if (Utilities.YesOrNoQuestion(input, "\nPretende inserir uma nova Pessoa no sistema?"))
 			email = AddPessoa(input, console);
 
 		System.out.println("\n Inserir um novo Utilizador");
@@ -74,7 +76,7 @@ public class Actions {
 		String ref, data_registo, data_aquisi;
 		Date dt_reg, dt_aqui;
 
-		id = Utilities.GetInt(input, "ID_Passe?", "Insira um ID válido!");
+		id = Utilities.GetInt(input, "ID_Passe?", "Insira um número de ID válido!");
 		if (email == null) email = Utilities.GetString(input, "Email?");
 		data_registo = Utilities.GetString(input, "Data Registo(yyyyMMdd)");
 		ref = Utilities.GetString(input, "Referência");
@@ -82,6 +84,7 @@ public class Actions {
 		data_aquisi = Utilities.GetString(input, "Data Aquisição(yyyyMMdd)");
 
 		SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+
 		java.util.Date parsed = format.parse(data_registo);
 		dt_reg = new Date(parsed.getTime());
 
@@ -89,7 +92,6 @@ public class Actions {
 		dt_aqui = new Date(parsed.getTime());
 
 		business.insertUtilizador(id,email,dt_reg,ref,saldo,dt_aqui);
-		System.out.println("");
 	}
 
 
@@ -169,5 +171,29 @@ public class Actions {
 			}
 			while (!delete);
 			System.out.println("Funcionário removido!");
+	}
+
+	public void viagUtil(Scanner input, Console console) throws ServiceException {
+		System.out.println("Conjunto de Viagens em curso de um determinado utilizador!");
+		System.out.println("Insira os seguintes valores:");
+		String email;
+		Timestamp dt_init;
+		Timestamp dt_fim;
+
+		email = Utilities.GetString(input,"Email do Utilizador?");
+		dt_init = Timestamp.valueOf(Utilities.GetString(input, "Data de inicio?(yyyy-mm-dd hh:mm:ss)"));
+		dt_fim = Timestamp.valueOf(Utilities.GetString(input, "Data de Fim?(yyyy-mm-dd hh:mm:ss)"));
+
+		List<Viagem> curses = business.getViagsUtil(email, dt_init, dt_fim);
+		Iterator<Viagem> it = curses.iterator();
+
+		if (!it.hasNext()) {
+			System.out.println("O utilizador " + email + " não tem viagens em curso de " + dt_init +" a " + dt_fim + ".");
+		} else {
+			Utilities.PrintTableHeaderForViagens();
+			while (it.hasNext()) {
+				Utilities.PrintViagens(it.next());
+			}
+		}
 	}
 }

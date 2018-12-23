@@ -84,7 +84,6 @@ public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO
             stmt.executeUpdate();
             conn.commit();
             stmt.close();
-            System.out.println("Utilizador removido com sucesso!");
         } catch (Exception e) {
             throw new DatabaseException(
                     "Unable to delete Utilizador. \nCause: "

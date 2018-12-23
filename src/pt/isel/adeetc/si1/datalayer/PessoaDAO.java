@@ -18,7 +18,6 @@ public class PessoaDAO extends BaseDAO implements IPessoaDAO {
 		Connection conn = null;
 
 		try {
-			//String statementQuery = "select BIAluno, NomeAluno, MoradaAluno, DataNascimento, NIFAluno from Aluno";
 			String statementQuery = "select Email, Nome, NIF from Pessoa";
 			Pessoa item;
 			ArrayList<Pessoa> container = new ArrayList<Pessoa>();

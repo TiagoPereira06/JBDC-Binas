@@ -1,6 +1,7 @@
 package pt.isel.adeetc.si1.businesslayer;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 import pt.isel.adeetc.si1.datalayer.*;
@@ -8,6 +9,7 @@ import pt.isel.adeetc.si1.datalayer.common.DatabaseException;
 import pt.isel.adeetc.si1.model.Funcionário;
 import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import pt.isel.adeetc.si1.model.Pessoa;
+import pt.isel.adeetc.si1.model.Viagem;
 
 /// Uncomment to work with MySQLDataAccessLayer.Database 
 /// and comment the TrabalhoSI1.SQLServerDataAccessLayer.Database import above.
@@ -20,6 +22,7 @@ public class Business implements IBusiness {
 	private IPessoaDAO pessoaDAO;
 	private IPasse_UtilizadorDAO passe_uDAO;
 	private IFuncDAO func_DAO;
+	private IViagDAO viag_DAO;
 	
 	
 	public IPessoaDAO getPessoaDAO() {
@@ -42,12 +45,21 @@ public class Business implements IBusiness {
 
 	public void setFunc_DAO(IFuncDAO func_DAO) {this.func_DAO = func_DAO;}
 
+	public IViagDAO getViag_DAO() {
+		return viag_DAO;
+	}
+
+	public void setViag_DAO(IViagDAO viag_DAO) {
+		this.viag_DAO = viag_DAO;
+	}
+
 	public Business()
 	{
 		/* Creates a new DAO but allows for future refactoring to support Dependency Injection */
 		pessoaDAO = new PessoaDAO();
 		passe_uDAO = new Passe_UtilizadorDAO();
 		func_DAO = new FuncDAO();
+		viag_DAO = new ViagDAO();
 	}
 	
 	@Override
@@ -79,6 +91,18 @@ public class Business implements IBusiness {
 		try
 		{
 			return passe_uDAO.getUtilizadores();
+		}
+		catch (DatabaseException exception)
+		{
+			throw new ServiceException(exception.getMessage(), exception);
+		}
+	}
+
+	@Override
+	public List<Viagem> getViagsUtil(String email, Timestamp dt_init, Timestamp dt_fim) throws ServiceException {
+		try
+		{
+			return viag_DAO.getViagsUtil(email, dt_init, dt_fim);
 		}
 		catch (DatabaseException exception)
 		{

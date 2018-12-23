@@ -33,10 +33,9 @@ public class Menu {
 		//menuItems.add(new MenuItem("Eliminar Utilizador",  Actions.class.getDeclaredMethod("deleteUtilizador", params)));
 		//menuItems.add(new MenuItem("Listar Pessoas",  Actions.class.getDeclaredMethod("ListarPessoas", params)));
 		menuItems.add(new MenuItem("Eliminar Funcionário",  Actions.class.getDeclaredMethod("deleteFunc", params)));
+		menuItems.add(new MenuItem("Viagens por Utilizador",  Actions.class.getDeclaredMethod("viagUtil", params)));
 
-		//TODO
 		// Insert more menu items to the menu. They must be implemented at CustomActions.java
-		//menuItems.add(new MenuItem("Option number 3", Actions.class.getDeclaredMethod("OptionNumber3", params)));
 
 	}
 }

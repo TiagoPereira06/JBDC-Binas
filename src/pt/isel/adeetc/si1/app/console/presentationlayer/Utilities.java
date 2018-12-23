@@ -2,10 +2,7 @@ package pt.isel.adeetc.si1.app.console.presentationlayer;
 
 import java.util.Scanner;
 
-import pt.isel.adeetc.si1.model.Funcionário;
-import pt.isel.adeetc.si1.model.Passe_Utilizador;
-import pt.isel.adeetc.si1.model.Pessoa;
-import pt.isel.adeetc.si1.model.Student;
+import pt.isel.adeetc.si1.model.*;
 
 
 public class Utilities {
@@ -119,5 +116,13 @@ public class Utilities {
 
 	public static void PrintFuncs(Funcionário func) {
 		System.out.printf("%-5d%-30s\n",func.getNum(),func.getEmail());
+	}
+
+	public static void PrintTableHeaderForViagens() {
+		System.out.printf("%-30s%-30s%-12s\n", "Email", "Data Inicial", "ID Bicicleta");
+	}
+
+	public static void PrintViagens(Viagem viagem) {
+		System.out.printf("%-30s%-30s%-12d\n", viagem.getEmail(), viagem.getDt_init(),viagem.getIdBic());
 	}
 }

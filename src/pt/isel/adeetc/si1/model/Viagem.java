@@ -1,24 +1,14 @@
 package pt.isel.adeetc.si1.model;
 
-import java.sql.Date;
+import java.sql.Timestamp;
 
 public class Viagem {
 
     private String email, mens;
-    private Date dt_init, dt_fin;
+    private Timestamp dt_init;
+    private Timestamp dt_fin;
     private int idEstInit, idEstDest, idBic;
     private short aval;
-
-    public Viagem(String email, Date date_i, Date date_f, int idEstInit, int idEstDest, int idBic, String mens, short aval){
-        setEmail(email);
-        setDt_init(date_i);
-        setDt_fin(date_f);
-        setIdEstInit(idEstInit);
-        setIdEstDest(idEstDest);
-        setIdBic(idBic);
-        setMens(mens);
-        setAval(aval);
-    }
 
     public String getEmail() {
         return email;
@@ -36,19 +26,19 @@ public class Viagem {
         this.mens = mens;
     }
 
-    public Date getDt_init() {
+    public Timestamp getDt_init() {
         return dt_init;
     }
 
-    public void setDt_init(Date dt_init) {
+    public void setDt_init(Timestamp dt_init) {
         this.dt_init = dt_init;
     }
 
-    public Date getDt_fin() {
+    public Timestamp getDt_fin() {
         return dt_fin;
     }
 
-    public void setDt_fin(Date dt_fin) {
+    public void setDt_fin(Timestamp dt_fin) {
         this.dt_fin = dt_fin;
     }
 
