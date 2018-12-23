@@ -28,12 +28,13 @@ public class Menu {
 		/*Items do menu*/
 		menuItems.add(new MenuItem("Quit", Actions.class.getDeclaredMethod("Quit", params)));
 		menuItems.add(new MenuItem("About", Actions.class.getDeclaredMethod("About", params)));
-		menuItems.add(new MenuItem("List Students",  Actions.class.getDeclaredMethod("ListStudents", params)));
-		menuItems.add(new MenuItem("XXX",  Actions.class.getDeclaredMethod("XXX", params)));
-		
+		menuItems.add(new MenuItem("Adicionar um novo Utilizador",  Actions.class.getDeclaredMethod("AddUtilizador", params)));
+		menuItems.add(new MenuItem("Listar Utilizadores",  Actions.class.getDeclaredMethod("ListarUtilizadores", params)));
+		menuItems.add(new MenuItem("Eliminar Utilizador",  Actions.class.getDeclaredMethod("deleteUtilizador", params)));
+
 		//TODO
 		// Insert more menu items to the menu. They must be implemented at CustomActions.java
-		menuItems.add(new MenuItem("Option number 3", Actions.class.getDeclaredMethod("OptionNumber3", params)));
+		//menuItems.add(new MenuItem("Option number 3", Actions.class.getDeclaredMethod("OptionNumber3", params)));
 
 	}
 }

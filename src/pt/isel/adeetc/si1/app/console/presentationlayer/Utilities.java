@@ -2,6 +2,8 @@ package pt.isel.adeetc.si1.app.console.presentationlayer;
 
 import java.util.Scanner;
 
+import pt.isel.adeetc.si1.model.Passe_Utilizador;
+import pt.isel.adeetc.si1.model.Pessoa;
 import pt.isel.adeetc.si1.model.Student;
 
 
@@ -84,19 +86,28 @@ public class Utilities {
 	}
 	
 	
-	/* Student*/
-	public static void PrintTableHeaderForStudents()
+	/* Pessoa*/
+	public static void PrintTableHeaderForPessoas()
 	{
 		//System.out.printf("%-5s%-15s%-20s%-15s%-15s\n","BI", "Name", "Address", "BirthDate", "NIF");
 		System.out.printf("%-40s%-20s%-15s\n","Email", "Name", "NIF");
 		System.out.println("******************************************************************");
 	}
 	
-	public static void PrintStudent(Student student)
+	public static void PrintPessoa(Pessoa pessoa)
 	{
 		//String name = student.Name.length()>15?student.Name.substring(0, 14):student.Name;
 		//String address = student.Address.length()>20?student.Address.substring(0, 19):student.Address;
 		//System.out.printf("%-5d%-15s%-20s%-15s%-15d\n",student.BI, name, address, student.BirthDate.toString(), student.NIF );
-		System.out.printf("%-40s%-20s%-15d\n",student.Email, student.Name, student.NIF);
+		System.out.printf("%-40s%-20s%-15d\n",pessoa.getEmail(), pessoa.getName(), pessoa.getNif());
+	}
+
+    public static void PrintTableHeaderForPasses() {
+		System.out.printf("%-5s%-30s%-20s%-10s%-8s%-20s\n","ID", "Email", "Data_Registo", "Referência","Saldo", "Data_Aquisição");
+		System.out.println("**********************************************************************************");
+    }
+
+	public static void PrintPasses(Passe_Utilizador passe) {
+		System.out.printf("%-5d%-30s%-20s%-10s%-8d%-20s\n",passe.getId(),passe.getEmail(),passe.getDt_reg(),passe.getRef(),passe.getSaldo(),passe.getDt_aqui());
 	}
 }

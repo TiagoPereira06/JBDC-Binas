@@ -8,15 +8,6 @@ public class Passe_Utilizador {
     private String email, ref;
     private Date dt_reg, dt_aqui;
 
-    public Passe_Utilizador(int id, String email, Date dt_reg, String ref, int saldo, Date dt_aqui){
-        setId(id);
-        setEmail(email);
-        setDt_reg(dt_reg);
-        setRef(ref);
-        setSaldo(saldo);
-        setDt_aqui(dt_aqui);
-    }
-
     public int getId() {
         return id;
     }

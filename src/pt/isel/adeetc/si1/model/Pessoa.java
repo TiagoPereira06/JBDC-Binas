@@ -4,11 +4,6 @@ public class Pessoa {
 
     private String name, email;
     private int nif;
-    public Pessoa(String email, String name, int nif){
-        setEmail(email);
-        setName(name);
-        setNif(nif);
-    }
 
     public String getName() {
         return name;
