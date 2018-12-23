@@ -13,4 +13,5 @@ public interface IStudentService extends IService {
 	List<Passe_Utilizador> GetPasses() throws ServiceException;
 	void insertUtilizador(int id, String email, Date dt_reg, String ref, int saldo, Date dt_aqui) throws ServiceException;
 	void deleteUtilizador(int id) throws ServiceException;
+	String insertPessoa(String email, String nome, int nif) throws ServiceException;
 }

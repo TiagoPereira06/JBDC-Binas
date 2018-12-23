@@ -7,7 +7,6 @@ import pt.isel.adeetc.si1.model.Passe_Utilizador;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ExecutionException;
 
 public class Passe_UtilizadorDAO extends BaseDAO implements IPasse_UtilizadorDAO {
 

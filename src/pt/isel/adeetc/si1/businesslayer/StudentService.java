@@ -19,8 +19,8 @@ import pt.isel.adeetc.si1.model.Pessoa;
 
 public class StudentService implements IStudentService {
 
-	IPessoaDAO pessoaDAO;
-	IPasse_UtilizadorDAO passe_uDAO;
+	private IPessoaDAO pessoaDAO;
+	private IPasse_UtilizadorDAO passe_uDAO;
 	
 	
 	public IPessoaDAO getPessoaDAO() {
@@ -88,6 +88,18 @@ public class StudentService implements IStudentService {
 		try
 		{
 			passe_uDAO.deleteUtilizador(id);
+		}
+		catch (DatabaseException exception)
+		{
+			throw new ServiceException(exception.getMessage(), exception);
+		}
+	}
+
+	@Override
+	public String insertPessoa(String email, String nome, int nif) throws ServiceException {
+		try
+		{
+			return pessoaDAO.insertPessoa(email,nome,nif);
 		}
 		catch (DatabaseException exception)
 		{

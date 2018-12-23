@@ -1,6 +1,7 @@
 package pt.isel.adeetc.si1.datalayer;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -26,7 +27,6 @@ public class PessoaDAO extends BaseDAO implements IPessoaDAO {
 
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(statementQuery);
-
 			while (rs.next()) {
 				item = new Pessoa();
 				item.setEmail(rs.getString(1));
@@ -43,5 +43,28 @@ public class PessoaDAO extends BaseDAO implements IPessoaDAO {
 		} finally {
 			closeConnection(conn);
 		}
+	}
+
+	@Override
+	public String insertPessoa(String email, String nome, int nif) throws DatabaseException {
+		String comandoSQL = "INSERT INTO Pessoa VALUES (?, ?, ?)";
+		Connection conn = null;
+		try {
+			conn = getConnectionFactory().getConnection();
+			PreparedStatement preparedStat = conn.prepareStatement(comandoSQL);
+			preparedStat.setString(1, email);
+			preparedStat.setString(2, nome);
+			preparedStat.setInt(3, nif);
+			preparedStat.executeUpdate();
+			conn.commit();
+			preparedStat.close();
+		} catch (Exception exception) {
+			throw new DatabaseException(
+					"Unable to insert Pessoa. \nCause: "
+							+ exception.getMessage(), exception);
+		} finally {
+			closeConnection(conn);
+		}
+		return email;
 	}
 }

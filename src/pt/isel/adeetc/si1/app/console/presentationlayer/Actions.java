@@ -61,18 +61,20 @@ public class Actions {
 
 	/*Option 2*/
 	public void AddUtilizador(Scanner input, Console console) throws ServiceException, ParseException {
+		String email = null;
+
 		if (!Utilities.YesOrNoQuestion(input, "\nA Pessoa já está no sistema?"))
-			AddPessoa(input, console);
+			email = AddPessoa(input, console);
 
 		System.out.println("\n Inserir um novo Utilizador");
 		System.out.println("Insira os seguintes valores:");
 
 		int id, saldo;
-		String email, ref, data_registo, data_aquisi;
+		String ref, data_registo, data_aquisi;
 		Date dt_reg, dt_aqui;
 
 		id = Utilities.GetInt(input, "ID_Passe?", "Insira um ID válido!");
-		email = Utilities.GetString(input, "Email?");
+		if (email == null) Utilities.GetString(input, "Email?");
 		data_registo = Utilities.GetString(input, "Data Registo(yyyyMMdd)");
 		ref = Utilities.GetString(input, "Referência");
 		saldo = Utilities.GetInt(input, "Saldo","Insira valores válidos!");
@@ -90,9 +92,18 @@ public class Actions {
 	}
 
 
-	private void AddPessoa(Scanner input, Console console) {
+	private String AddPessoa(Scanner input, Console console) throws ServiceException {
 		System.out.println("\nAdicionando uma nova Pessoa!");
-		//TODO
+		System.out.println("Insira os seguintes valores:");
+
+		String email, nome;
+		int nif;
+
+		email = Utilities.GetString(input,"Email?");
+		nome = Utilities.GetString(input, "Nome?");
+		nif = Utilities.GetInt(input, "NIF?", "Insira valores válidos!");
+
+		return studentService.insertPessoa(email, nome, nif); //retorna o Email da Pessoa criada
 	}
 
 	public void ListarUtilizadores(Scanner input, Console console) throws ServiceException {
@@ -102,7 +113,7 @@ public class Actions {
 		Iterator<Passe_Utilizador> it = curses.iterator();
 
 		if (!it.hasNext()) {
-			System.out.println("Sem Pessoas!");
+			System.out.println("Sem Utilizadores!");
 		} else {
 			Utilities.PrintTableHeaderForPasses();
 			while (it.hasNext()) {
@@ -116,7 +127,23 @@ public class Actions {
 		int id = Utilities.GetInt(input,"ID?","Insira valores válidos!");
 		studentService.deleteUtilizador(id);
 	}
-	
+
+	public void ListarPessoas(Scanner input, Console console) throws ServiceException {
+
+		System.out.println("\nListar Pessoas!");
+		List<Pessoa> curses = studentService.GetPessoas();
+		Iterator<Pessoa> it = curses.iterator();
+
+		if (!it.hasNext()) {
+			System.out.println("Sem Pessoas!");
+		} else {
+			Utilities.PrintTableHeaderForPessoas();
+			while (it.hasNext()) {
+				Utilities.PrintPessoa(it.next());
+			}
+		}
+	}
+
 	//TODO
 	// Insert more action menu items. 
 	// The methods must have the following signature "public void [METHODNAME](Scanner input) throws BusinessException"
